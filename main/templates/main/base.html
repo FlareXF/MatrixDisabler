@@ -8,13 +8,33 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
+
         {% if subtitle %}
             <title> {{ title }} - {{ subtitle }} </title>
         {% else %}
             <title> {{ title }}</title>
         {%endif%}
+
     </head>
     <body>
+
+        
+        <div class="header">
+            <div class="logo">
+
+            </div>
+            <div class="nav">
+                <a href="">Главная</a>
+                <a href="">Журнал</a>
+                <a href="">О нас</a>
+            </div>
+            <div class="login">
+                <a href="">Войти/Зарегистрироваться</a>
+            </div>
+        </div>
+
+        <div class="container">
+
         <div class="container">
             {% block content %} {% endblock %}
         </div>
