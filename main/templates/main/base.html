@@ -27,8 +27,7 @@
     </head>
     <body>
 
-        <h1>Home page, dickheads</h1>
-        
+
         <div class="header">
             <div class="logo">
 
@@ -39,13 +38,20 @@
                 <a href="{% url 'main-about' %}">О нас</a>
             </div>
             <div class="login">
-                <a href="#">Войти/Зарегистрироваться</a>
+                <a href="{% url 'register' %}">Войти / Зарегистрироваться</a>
             </div>
         </div>
 
         <div class="container">
 
         <div class="container">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
             {% block content %} {% endblock %}
         </div>
 

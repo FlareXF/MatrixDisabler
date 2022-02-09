@@ -1,22 +1,8 @@
 from curses.ascii import HT
 from django.shortcuts import render
+from .models import Post
 
 title = 'MatrixDisabler'
-
-posts = [
-    {
-        'author': 'Gay',
-        'title': 'Post 1',
-        'content': 'Ya sosu huy',
-        'date_posted': '06/02/2022'
-    },
-        {
-        'author': 'Not gay',
-        'title': 'Post 2',
-        'content': 'Ya ne sosu huy',
-        'date_posted': '07/02/2022'
-    }
-]
 
 def home(request):
     context = {
@@ -27,7 +13,7 @@ def home(request):
 
 def blog(request):
     context = {
-            'posts': posts,
+            'posts': Post.objects.all(),
             'title': title,
             'subtitle': 'context'
         }
