@@ -29,20 +29,22 @@
 
 
         <div class="header">
-            <div class="logo">
-
+            <div class="header__section">
+                <div class="logo">
+                    <img class="logo" src="{% static 'main/gatka.png' %}" alt="" width=50px">
+                </div>
+                <a class="header_hrefs" href="{% url 'main-home' %}">Главная</a>
+                <a class="header_hrefs" href="{% url 'main-blog' %}">Журнал</a>
+                <a class="header_hrefs" href="{% url 'main-about' %}">О нас</a>
             </div>
-            <div class="navbar-nav">
-                <a href="{% url 'main-home' %}">DA</a>
-                <a href="{% url 'main-blog' %}">Журнал</a>
-                <a href="{% url 'main-about' %}">О нас</a>
-            </div>
-            <div class="login">
-                <a href="{% url 'register' %}">Войти / Зарегистрироваться</a>
+            <div class="header__section">
+                <a class="header_hrefs reg" href="{% url 'register' %}"><button class="butt">Войти</button></a>
             </div>
         </div>
 
-        <div class="container">
+        <div class="da">
+            <img src="{% static 'main/text.png' %}" alt="">
+        </div>
 
         <div class="container">
             {% if messages %}
