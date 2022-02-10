@@ -1,4 +1,15 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
+
+<div class="container">
+    <div class="check_link">
+        <div class="form_group">
+            <input class="link" type="text" placeholder=" ">
+            <label class="label_link">Введите URL - адрес</label>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}

@@ -1,8 +1,5 @@
 {% extends "main/base.html" %}
 {% block content %}
         {% for post in posts %}
-            <h1>{{ post.title }}</h1>
-            <p>By {{ post.author }} on {{ post.date_posted|date:"N j, Y, H:i" }}</p>
-            <p> {{ post.content }}</p>
         {% endfor %}
 {% endblock content %}
