@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5vjc6xjx+_s_z6n6yafrzxw-cq_p+zb^sy#1$msg1j3^4av^qa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,8 +120,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-
+##### CUSTOM VARIABLES
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'profile'
+LOGIN_URL = 'login'
+##### CUSTOM VARIABLES END
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
