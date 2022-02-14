@@ -245,3 +245,44 @@ body{
 .form_group{
     position: relative;
 }
+
+.av_img{
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.profile_name{
+    text-align: center;
+}
+
+.profile_link{
+    margin-top: 50px;
+}
+
+.check_link_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonn{
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+}
+.btn-light{font-size:2rem;}
+.btn .fa { font-size: 2rem;}
+.butt_prof{
+    border: solid #cbd5db 1px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.butt_prof:hover{
+    background-color: green;    
+    color: #cbd5db;
+    transition: .5s;
+}

@@ -48,18 +48,32 @@
                                 <a class="header_hrefs" href="{% url 'main-about' %}">О нас</a>
                             </li>
 
-
                             {% if user.is_authenticated %}
+                            <!--
                             <li>
                                 <a class="header_hrefs reg" href="{% url 'profile' %}"><button class="butt">{{ user.username }}</button></a>
                             </li>
                             <li>
                                 <a class="header_hrefs reg" href="{% url 'logout' %}"><button class="butt">Выйти</button></a>
                             </li>
+                            -->
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-md rounded-pill" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{% url 'profile' %}">Профиль</a>
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Выйти</a>
+                                </div>
+                            </div>
                             {% else %}
+                            <div class="btn-group" role="group">
+                                <a class="btn btn-light btn-md rounded-pill" href="{% url 'login' %}" role="button">Войти</a>
+                                <a class="btn btn-light btn-md rounded-pill" href="{% url 'register' %}" role="button">Регистрация</a>
+                            </div>
+                            <!--
                             <li>
                                 <a class="header_hrefs reg" href="{% url 'register' %}"><button class="butt">Войти</button></a>
                             </li>
+                            -->
                             {% endif %}
 
                         </ul>
