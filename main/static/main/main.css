@@ -6,6 +6,7 @@
 
 body{
     background-color: #f5f7f9;
+    margin-top: 6rem;
 }
 
 .header{
@@ -212,7 +213,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 500px;
+    padding-top: 400px;
 }
 
 .link{
@@ -273,8 +274,11 @@ body{
     padding-top: 50px;
     text-align: center;
 }
+
 .btn-light{font-size:25px;}
+
 .btn .fa { font-size: 25px;}
+
 .butt_prof{
     border: solid #cbd5db 1px;
     width: 150px;
@@ -290,14 +294,7 @@ body{
 }
 
 .media{
-    margin-top: 100px;
     margin-left: 20px;
-}
-
-.form_profile{
-    position: absolute;
-    left: 20px;
-    top: 300px;
 }
 
 .butt_profile{
@@ -361,3 +358,39 @@ body{
     display: flex;
     justify-content: left;
 }
+
+
+
+
+
+
+.navbar{
+      font-size: larger;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
