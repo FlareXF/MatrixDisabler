@@ -67,6 +67,7 @@ body{
 .header_list li{
     list-style: none;
     margin-left: 20px;
+    margin-top: 5px;
 }
 
 
@@ -95,6 +96,7 @@ body{
     border: solid #cbd5db 1px;
     width: 150px;
     border-radius: 30px;
+    font-size: 25px;
     background-color: #fff;
     transition: .5s;
 }
@@ -271,8 +273,8 @@ body{
     padding-top: 50px;
     text-align: center;
 }
-.btn-light{font-size:2rem;}
-.btn .fa { font-size: 2rem;}
+.btn-light{font-size:25px;}
+.btn .fa { font-size: 25px;}
 .butt_prof{
     border: solid #cbd5db 1px;
     width: 150px;
@@ -285,4 +287,77 @@ body{
     background-color: green;    
     color: #cbd5db;
     transition: .5s;
+}
+
+.media{
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.form_profile{
+    position: absolute;
+    left: 20px;
+    top: 300px;
+}
+
+.butt_profile{
+    border: solid #242424 1px;  
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+    background-color: #969696;
+    transition: .5s;
+}
+
+.butt_profile:hover{
+    background-color: #e0e0e0;
+    border: solid #242424 1px;
+    color: black;
+    transition: .5s;
+}
+
+.staslox{
+    margin-top: 73px;
+}   
+
+.border-bottom{
+    width: 330px;
+}
+
+.btn-secondary{
+    width: 250px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.fa{
+    position: relative;
+    left: -7px;
+}
+
+.trax{
+    width: 1000px;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 300px;
+    background-color: palevioletred;
+    color: blue;
+    font-size: 130px;
+    border: rebeccapurple 5px solid;
+    border-radius: 50% 0 0 50%;
+}
+
+.circle{
+    position: relative;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 50%;
+    background-color: pink;
+}
+
+.fle{
+    display: flex;
+    justify-content: left;
 }

@@ -1,0 +1,24 @@
+{% include "main/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
+    
+<div class="content-section">
+    <div class="media">
+      <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" width="150px">
+      <div class="media-body">
+        <h2 class="pro">{{ user.username }}</h2>
+        <p class="text-secondary">{{ user.email }}</p>
+      </div>
+
+        <div class="form_profile">
+          <div class="btn-group-vertical">
+            <a href="{% url 'personal' %}"><button class="btn btn-secondary"><i class="fa fa-address-book-o"></i>Личные данные</button></a>
+            <a href="{% url 'change' %}"><button class="btn btn-secondary"><i class="fa fa-cog"></i>Изменение пароля</button></a>
+            <a href="{% url 'trahnut' %}"><button class="btn btn-secondary"><i class="fa fa-wheelchair-alt"></i>Трахнуть</button></a>
+            <a href="{% url 'delete' %}"><button class="btn btn-secondary"><i class="fa fa-remove"></i>Удалить аккаунт</button></a>
+          </div>
+        </div>
+    </div>
+</div>
+{% block content %}{% endblock content %}

@@ -15,6 +15,19 @@ def register(request):
         form = UserRegisterForm()
     return render(request , 'users/register.html', {'form': form})
 
+def personal(request):
+    return render(request, 'users/personal.html')
+    
+def change(request):
+    return render(request, 'users/change.html')
+
+def trahnut(request):
+    return render(request, 'users/trahnut.html')
+
+def delete(request):
+    return render(request, 'users/delete.html')
+
+
 @login_required
 def profile(request):
     u_form = UserUpdateForm()
