@@ -13,7 +13,11 @@ def register(request):
             return redirect('login')
     else:
         form = UserRegisterForm()
-    return render(request , 'users/register.html', {'form': form})
+    context = {
+        'form': form,
+        'name': cut_name(request)
+    }
+    return render(request , 'users/register.html', context)
 
 def personal(request):
     return render(request, 'users/personal.html')
@@ -35,5 +39,12 @@ def profile(request):
     context = {
         'u_from': u_form,
         'p_form': p_form,
+        'name': cut_name(request)
     }
     return render(request, 'users/profile.html', context)
+
+
+def cut_name(request):
+    nameuser = request.user.username
+    if len(nameuser) > 10:
+        return (nameuser[:8] + '..')
