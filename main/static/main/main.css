@@ -213,7 +213,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 400px;
+    padding-top: 250px;
 }
 
 .link{
@@ -293,10 +293,6 @@ body{
     transition: .5s;
 }
 
-.media{
-    margin-left: 20px;
-}
-
 .butt_profile{
     border: solid #242424 1px;  
     border-radius: 5px;
@@ -332,38 +328,6 @@ body{
     left: -7px;
 }
 
-.trax{
-    width: 1000px;
-    height: 300px;
-    margin-top: 150px;
-    margin-left: 300px;
-    background-color: palevioletred;
-    color: blue;
-    font-size: 130px;
-    border: rebeccapurple 5px solid;
-    border-radius: 50% 0 0 50%;
-}
-
-.circle{
-    position: relative;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    display: block;
-    border-radius: 50%;
-    background-color: pink;
-}
-
-.fle{
-    display: flex;
-    justify-content: left;
-}
-
-
-
-
-
-
 .navbar{
       font-size: larger;
 }
@@ -394,3 +358,64 @@ body{
     margin-bottom: 16px;
 }
 
+.button_block{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.checkbutton{
+    border: none;
+    background-color: #3fa642;
+    border-radius: 30px;
+    width: 200px;
+    padding: 15px 0;
+    color: #fff;
+    transition: .5s background-color;
+}
+
+.checkbutton:hover{
+    background-color: #2b632d;
+    transition: .5s background-color;
+}
+
+.h1_home {
+    font-size: 5em;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+span {
+    border-right: .05em solid #9e9e9e   ;
+    animation: caret 1s steps(1) infinite;
+}
+  
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+.list-group-item{
+    border-left: none;
+    border-right: none;
+}
+
+.top_but{
+    border-top: none;
+}
+
+.bot_but{
+    border-bottom: none;
+}
+
+.daun{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.footer{
+    background-color: #fff;
+}

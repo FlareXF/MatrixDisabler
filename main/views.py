@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.models import User
 
-title = 'MatrixDisabler'
+title = 'Gatka'
 
 def home(request):
     context = {
