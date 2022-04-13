@@ -1,10 +1,8 @@
 {% extends "main/base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
-
-
-<div class="container">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
     <h1 class="h1_home">GATKA - проверь сайт на гадкость</h1>
     <div class="check_link">
         <div class="form_group">
@@ -14,9 +12,30 @@
     </div>
     <div class="button_block">
         <button class="checkbutton">ПРОВЕРИТЬ</button>
-        <button type="button" class="btn btn-secondary daun" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Помощь?">
-  Попросить помощь у бога
-</button>   
+        <button type="button"
+                class="btn btn-secondary daun"
+                data-container="body"
+                data-toggle="popover"
+                data-placement="bottom"
+                data-content="Помощь?">
+            Попросить помощь у бога
+        </button>
     </div>
-</div>
-{% endblock content %}
+    <div class="content-session">
+        <form method="POST">
+            {% csrf_token %}
+            {% include 'main/home_form.html' with form=form %}
+            <div class="form-group">
+                <div class="btn-group-vertical" role="group" aria-label="Check"></div>
+                <button class="btn btn-lg btn-success btn-block badge-pill" type="submit">Проверить</button>
+                <button type="button"
+                        class="btn btn-sm btn-block btn-link"
+                        data-container="body"
+                        data-toggle="popover"
+                        data-placement="bottom"
+                        data-content="Помощь? А может ты лучше нахуй пойдешь?">
+                    Попросить помощь у бога
+                </button>
+            </div>
+        </form>
+    {% endblock content %}

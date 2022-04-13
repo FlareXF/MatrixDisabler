@@ -2,14 +2,14 @@
 {% block content %}
         {% for post in posts %}
         <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+            <img class="align-self-start rounded-circle article-img" src="{{ post.author.profile.image.url }}">
             <div class="media-body">
               <div class="article-metadata">
-                <a class="mr-2" href="{% url 'main-user-posts' post.author.username %}">{{ post.author }}</a>
+                <a class="mr-2" style="word-break:break-word" href="{% url 'main-user-posts' post.author.username %}">{{ post.author }}</a>
                 <small class="text-muted">{{ post.date_posted|date:"N j, Y, H:i" }}</small>
               </div>
-              <h2><a class="article-title" href="{% url 'main-blog-detail' post.id %}">{{ post.title }}</a></h2>
-              <p class="article-content">{{ post.content }}</p>
+              <h2><a class="article-title" style="word-break:break-word" href="{% url 'main-blog-detail' post.id %}">{{ post.title }}</a></h2>
+              <p class="article-content" style="word-break:break-word">{{ post.content }}</p>
             </div>
           </article>
           {% endfor %}

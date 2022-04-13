@@ -6,12 +6,23 @@ from django.contrib.auth.models import User
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
+from .forms import CheckForm
+from django.contrib import messages
 
 
 title = 'Gatka'
 
 def home(request):
+    if request.method == 'POST':
+        form = CheckForm(request.POST)
+        if form.is_valid():
+            domain = form.cleaned_data.get('domain_form')
+            messages.success(request, f'Хорошие новости!  {domain} является оффициальным сайтом!')
+    else:
+        form = CheckForm()
+
     context = {
+        'form': form,
         'title': title,
         'subtitle': 'home',
         'name': cut_name(request)

@@ -26,13 +26,12 @@
   </div>
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-      </div>
       <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-        <form>
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
           <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput1">Электронная почта</label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
           </div>
           <div class="form-group">
             <label for="exampleFormControlSelect1">Пол</label>
@@ -52,9 +51,12 @@
             <label for="exampleFormControlTextarea1">О себе</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
-        </form>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Сохранить</button>
-      </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Сохранить</button>
+          </div>
+      </form>
+
+    </div>
       <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
         <div class="input-group">
           <div class="input-group-prepend">
@@ -64,6 +66,7 @@
           <button type="button" class="btn btn-primary btn-lg btn-block">Сохранить</button>
         </div>
       </div>
+
       <div class="tab-pane fade" id="list-inf" role="tabpanel" aria-labelledby="list-inf-list">
         <label for="formGroupExampleInput">Имя пользователя</label>
         <input class="form-control" type="text" placeholder="{{ user.username }}" readonly>
@@ -72,24 +75,20 @@
         <label for="formGroupExampleInput">Пароль</label>  
         <input class="form-control" type="text" placeholder="****************" readonly>
       </div>
+
       <div class="tab-pane fade" id="list-test" role="tabpanel" aria-labelledby="list-inf-list">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Profile Info</legend>
+                <legend class="border-bottom mb-4">Изменить информацию о профиле</legend>
                 {{ u_form|crispy }}
-                {{ p_form|crispy }}
+                {% include 'users/change_profile_form.html' with form=form %}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Update</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Обновить</button>
             </div>
         </form>
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="container">
-  {% block content %}{% endblock content %}
 </div>

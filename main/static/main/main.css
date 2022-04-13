@@ -38,7 +38,7 @@ body{
 }
 
 .container{
-    max-width: 1900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -227,10 +227,6 @@ body{
 .staslox{
     margin-top: 73px;
 }   
-
-.border-bottom{
-    width: 330px;
-}
 
 .fa{
     position: relative;
